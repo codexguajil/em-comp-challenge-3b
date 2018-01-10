@@ -1,0 +1,777 @@
+* {
+  /*font-family: sans-serif;*/
+  font-size: 16px;
+  letter-spacing: .1em;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Beigly Demo';
+  src: url('fonts/BeiglyDemo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fatso';
+  src: url('fonts/FATSOCAP.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Choc';
+  src: url('fonts/CHOCD.otf');
+}
+
+@font-face {
+  font-family: 'Retro';
+  src: url('fonts/MyGirlisRetro.ttf');
+}
+
+.grid {
+  display: grid;
+  font-family: 'Retro';
+  /*background-color: lightgrey;*/
+  background: linear-gradient(to right, steelblue, white 18.5%, pink, #ff7c4d 85%);
+  grid-template-columns: 1fr 3fr 1.5fr;
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-areas:
+  "drawer header header"
+  "drawer graphs graphs"
+  "drawer description socials";
+  height: 220vh;
+}
+
+/*drawer styling*/
+
+.drawer {
+  /*background: linear-gradient(pink, white);*/
+  /*background-image: url(images/sprinkle.jpg);*/
+  color: snow;
+  display: grid;
+  font-family: 'Fredoka One';
+  grid-area: drawer;
+  grid-template-columns: 1fr;
+  grid-template-rows: .5fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "pic"
+  "main"
+  "admin"
+  "categories";
+  line-height: 2em;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.profile-pic {
+  border-bottom: 5px dotted cyan;
+  grid-area: pic;
+}
+
+.username {
+  margin-left: 10%;
+}
+
+.lolli {
+  margin: 0 1em;
+  padding-top: .5em;
+}
+
+.main-drawer {
+  border-bottom: 5px dotted lightgreen;
+  grid-area: main;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.main-drawer-heading {
+  margin-left: 1em;
+}
+
+.admin {
+  grid-area: admin;
+  border-bottom: 5px dotted blueviolet;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.categories {
+  grid-area: categories;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+/*header styling*/
+
+.header {
+  background: linear-gradient(to bottom right, green 50%, white 18.5%, pink, #ff7c4d 85%);
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "navbar navbar navbar"
+  "maintitle maintitle navbtns"
+  "subheader subheader subheader"
+}
+
+.nav-bar {
+  display: inline-flex;
+  grid-area: navbar;
+}
+
+/*nav bar css*/
+
+.grid-btn {
+  background-image: url(images/grapes.svg);
+}
+
+.hamburger {
+  background-image: url(images/menu.svg);
+}
+
+.notepad {
+  background-image: url(images/pineapple.svg);
+}
+
+.profile {
+  background-image: url(images/orange.svg);
+  background-color: orange;
+}
+
+.searchbtn {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border: none;
+  height: 50px;
+  width: 50px;
+}
+
+/*hover states*/
+.grid-btn:hover {
+  background-color: darkred;
+}
+
+.hamburger:hover {
+  background-color: darkblue;
+}
+
+.notepad:hover {
+  background-color: purple;
+}
+
+
+/*end of navbar css*/
+
+.header-btn {
+  border: 3px solid orange;
+  border-radius: 40px;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.header-btn:hover {
+  background-color: pink;
+}
+
+.online {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.open-button {
+  display: inline-flex;
+  font-size: .9em;
+  grid-area: openbtn;
+  width: 6em;
+}
+
+.bkm-button {
+  background-image: url(images/bookmark-tag.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  grid-area: bkmbtn;
+}
+
+.pencil-button {
+  background-image: url(images/fork.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  grid-area: pencilbtn;
+}
+
+.trash-button {
+  background-image: url(images/dinner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  grid-area: trashbtn;
+}
+
+.nav-buttons {
+  display: inline-flex;
+  grid-area: navbtns;
+  margin-top: 30px;
+}
+
+.sub-headers {
+  align-items: flex-end;
+  display: flex;
+  grid-area: subheader;
+  margin-left: 1em;
+}
+
+.sub {
+  display: inline-flex;
+  margin: 0 1em .5em;
+}
+
+.search {
+  background-color: pink;
+  border: none;
+  color: blue;
+  font-family: 'Beigly Demo';
+  grid-area: search;
+  height: 3.1em;
+  width: 80%;
+  /*make a media query for search bar width*/
+}
+
+/*location preview*/
+.location {
+  margin-right: 1em;
+}
+
+.location-preview {
+  display: inline-flex;
+  margin-top: .3em;
+}
+
+.main-title {
+  grid-area: maintitle;
+  margin: 30px 0 0 20px;
+}
+
+.pin {
+  margin-right: .2em;
+}
+
+.preview {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/*end of location preview*/
+
+.title {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: 'Beigly Demo';
+  font-size: 2em;
+  grid-area: title;
+}
+
+.location {
+  color: lightgreen;
+  grid-area: location;
+  font-family: ;
+}
+
+.preview {
+  color: lightpink;
+  grid-area: preview;
+}
+
+.summary-header {
+  color: dodgerblue;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(.4, #fff), color-stop(0.2, #fff), color-stop(1, dodgerblue));
+  background-image: gradient( linear, left top, right top, color-stop(0, #fff), color-stop(0.2, #fff), color-stop(1, #22f));
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  grid-area: summary;
+}
+
+.applicants-header {
+  color: #ff99cf;
+  grid-area: applicants;
+}
+
+.job-header {
+  color: lightgreen;
+  grid-area: job;
+}
+
+.interview-header {
+  color: darkorange;
+  grid-area: interview;
+}
+
+.activity-header {
+  color: gold;
+  grid-area: activity;
+}
+
+.broadcast-header {
+  color: cyan;
+  grid-area: broadcast;
+}
+
+.notification-header {
+  color: #9999ff;
+  grid-area: notification;
+}
+
+.sub {
+  font-family: 'Fascinate';
+  font-size: 1em;
+}
+
+/*end of header styling*/
+/*graphs styling*/
+
+.graphs {
+  border-bottom: 3px dotted #ff8533;
+  border-image: linear-gradient(to right, #ffff99 50%, #3acfd5 60%);
+  border-image-slice: 1;
+  display: inline-flex;
+  /*background: linear-gradient(to right, white, pink);*/
+  grid-area: graphs;
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.circlies {
+  display: inline-flex;
+  margin-top: 10%;
+  margin-right: 0;
+  margin-left: 5%;
+}
+
+.fruit-graph {
+  display: inline-flex;
+  margin-top: 3%;
+}
+
+.press-btn {
+  background-color: aquamarine;
+  display: inline-block;
+  /*position: absolute;*/
+  left: 13.5%;
+  margin-top: 15.9%;
+  border-radius: 40px;
+  width: 300px;
+}
+
+.squish-btn {
+  background-color: aqua;
+  /*display: inline-block;
+  position: absolute;*/
+  /*right: 10%;*/
+  margin-top: 26px;
+  border-radius: 40px;
+  width: 300px;
+}
+
+.graph-and-button {
+  text-align: center;
+}
+/*description styling*/
+.descriptions {
+  /*background: lightgrey;*/
+  /*background: linear-gradient(to left, pink, white);*/
+  grid-area: description;
+  height: 100%;
+  width: 100%;
+}
+
+.description-table {
+  background: pink;
+  opacity: .6;
+  height: 640px;
+  width: 80%;
+  margin: auto;
+}
+
+th, td {
+    border-bottom: 1px dashed purple;
+    border-collapse: collapse;
+}
+
+.right {
+  /*font-family: 'papyrus';*/
+  padding-left: 20px;
+  vertical-align: center;
+}
+
+.right-bottom {
+  border: none;
+}
+
+.right-veruca {
+  position: relative;
+  padding-left: 20px;
+}
+
+.top-description {
+  background: blue;
+  opacity: .8;
+  text-align: left;
+}
+
+.veruca {
+  border-radius: 50%;
+}
+
+.veruca-text {
+  margin-left: 10px;
+  position: absolute;
+  margin-top: 15px;
+}
+
+/*end of description styling*/
+
+/*social section styling*/
+.edit-icon {
+  margin: 3px 3px;
+}
+
+.mouth {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+.social {
+  /*background: grey;*/
+  grid-area: socials;
+}
+
+.scl-btn {
+  font-family: 'retro';
+  letter-spacing: .5em;
+  height: 2em;
+  position: relative;
+  margin: 30px auto 0 10%;
+  width: 80%;
+}
+
+.scl-btn:hover {
+  cursor: pointer;
+}
+
+.input-and-button {
+  display: inline-flex;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  /*height: 2em;*/
+  width: 80%;
+}
+
+.social-btn {
+  background: cyan;
+  border: 2px solid cyan;
+  height: 2.2em;
+}
+
+.social-btn:hover {
+  background: violet;
+}
+
+.social-input {
+  background: red;
+  color: #7d00b3;
+  padding-left: 20%;
+  /*margin-left: 10%;*/
+  /*margin-bottom: 5%;*/
+  height: 2em;
+  width: 60%;
+}
+
+.social-text {
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.social-h {
+  color: darkviolet;
+  margin-bottom: 10px;
+}
+
+.social-type {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.facebook {
+  background-color: orange;
+}
+
+.linkedin {
+  background-color: forestgreen;
+}
+
+.twitter {
+  background-color: yellow;
+}
+
+@media only screen and (min-width: 1201px) {
+  .grid {
+    max-height: 160vh;
+  }
+
+  .graphs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "circles fruit"
+  }
+
+   .circle-grid {
+    grid-area: circles;
+  }
+
+  .fruit-grid {
+    grid-area: fruit;
+    margin-top: 40px;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+  .graphs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "circles circles"
+    "fruit fruit"
+  }
+
+  .header {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 50px 1fr .7fr .2fr;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "maintitle maintitle navbtns"
+    "subheader subheader subheader"
+    "subheader subheader subheader"
+  }
+
+  .sub-headers {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .grid {
+    height: 295vh;
+  }
+
+  .circle-grid {
+    grid-area: circles;
+  }
+
+  .fruit-grid {
+    grid-area: fruit;
+  }
+
+  .press-btn {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+  grid-template-columns: 1fr 3fr 1.5fr;
+  grid-template-rows: 720px 1.3fr .3fr .4fr;
+  grid-template-areas:
+  "header header header"
+  "graphs graphs graphs"
+  "description description description"
+  "socials socials socials";
+  height: 100%;
+  }
+
+  .nav-buttons {
+    margin-left: 8%;
+  }
+
+  .bar-graph {
+    /*margin-left: 1%;*/
+  }
+
+  .fruit-graph {
+    /*margin-left: 3%;*/
+    width: 100%;
+  }
+
+  .circle1 {
+  background-image: url(images/raspberry.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+ .circlies {
+  display: none;
+ }
+
+ .graphs {
+  display: block;
+  width: 100%;
+ }
+
+ .press-btn {
+  display: none;
+ }
+
+ .mobile-circlies {
+   background: #385a94;
+   border: 10px solid pink;
+   border-radius: 50%;
+   height: 300px;
+   letter-spacing: 1em;
+   width: 80%;
+   margin-bottom: 50px;
+   margin-left: 5%;
+  }
+
+ .inner-circle {
+  position: relative;
+  background: #a9aaab;
+  border: 5px dashed yellow;
+  border-radius: 50%;
+  height:100%;
+  width:65%;
+  margin: 0px 0px 0px 18%;
+ }
+
+ .third-circle {
+  position: relative;
+  background: violet;
+  border: 4px dotted green;
+  border-radius: 50%;
+  height:100px;
+  width:100px;
+  margin: 60px auto;
+ }
+
+  .drawer {
+  display: none;
+}
+
+.header {
+  /*background: white;*/
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: .1fr .3fr 100px .2fr .2fr;
+  grid-template-areas: 
+  "navbar navbar navbar"
+  "maintitle maintitle maintitle"
+  "navbtns navbtns navbtns"
+  "subheader subheader subheader"
+  "subheader subheader subheader"
+}
+
+.main-title {
+  
+}
+
+.sub-headers {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: subheader;
+  margin-left: 1em;
+}
+
+.edit-icon {
+  margin: 3px 3px;
+}
+
+.description-table {
+  height: 500px;
+}
+
+.mouth {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+.social {
+  /*background: grey;*/
+  grid-area: socials;
+}
+
+/*.scl-btn {
+  font-family: 'retro';
+  letter-spacing: .5em;
+  height: 2em;
+  position: relative;
+  margin: 30px auto 0 10%;
+  width: 80%;
+}*/
+
+.scl-btn:hover {
+  cursor: pointer;
+}
+
+.input-and-button {
+  display: inline-flex;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  /*height: 2em;*/
+  width: 80%;
+}
+
+.social-btn {
+  background: cyan;
+  border: 2px solid cyan;
+  height: 2.2em;
+}
+
+.social-btn:hover {
+  background: violet;
+}
+
+.social-input {
+  background: red;
+  color: #7d00b3;
+  padding-left: 20%;
+  /*margin-left: 10%;*/
+  /*margin-bottom: 5%;*/
+  height: 2em;
+  width: 60%;
+}
+
+.social-text {
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.social-h {
+  color: darkviolet;
+  margin-bottom: 10px;
+}
+
+.social-type {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+}

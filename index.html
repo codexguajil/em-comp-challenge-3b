@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <title>Static-Comp-3b</title>
+</head>
+<body>
+  <div class="grid">
+    <header class="header">
+      <div class="nav-bar">
+        <button class="hamburger searchbtn"></button>
+        <input class="search"></input>
+        <button class="profile searchbtn"></button>
+        <button class="notepad searchbtn"></button>
+        <button class="grid-btn searchbtn"></button>
+      </div>
+      <div class="main-title">
+        <h1 class="title">Willy Wonka Eats</h1>
+        <div class="location-preview">
+          <h4 class="location"><img src="images/pin.svg" height="15" width="15" class="pin">Los Angeles, CA</h4>
+          <h4 class="preview">Preview this post</h4>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button class=" header-btn open-button"><img src="images/full-circle.svg" height="15" width="15" class="online">OPEN</button>
+        <button class="header-btn bkm-button"></button>
+        <button class="header-btn pencil-button"></button>
+      <button class="header-btn trash-button"></button>
+      </div>
+      <div class="sub-headers">
+        <h3 class="sub summary-header">Summary</h3>
+        <h3 class="sub applicants-header">Applicants</h3>
+        <h3 class="sub job-header">Job Board</h3>
+        <h3 class="sub interview-header">Interviews</h3>
+        <h3 class="sub activity-header">Activity</h3>
+        <h3 class="sub broadcast-header">Broadcast</h3>
+        <h3 class="sub notification-header">Notifications</h3>
+      </div>
+    </header>
+    <section class="drawer">
+      <section class="profile-pic">
+        <img src="images/profile-pic.png" class="img-circle">
+        <h3 class="username">Edgar Eloy Munoz</h3>
+      </section>
+      <section class="main-drawer">
+        <h4 class="main-drawer-heading">Main</h4>
+        <h3><img class="lolli" src="images/lollipop.svg" height="20" width="20">HOME</h3>
+        <h3><img class="lolli" src="images/lollipop.svg" height="20" width="20">JOBS</h3>
+        <h3><img class="lolli" src="images/lollipop.svg" height="20" width="20">RESUMES</h3>
+        <h3><img class="lolli" src="images/lollipop.svg" height="20" width="20">TASKS</h3>
+        <h3><img class="lolli" src="images/lollipop.svg" height="20" width="20">CALENDAR</h3>
+      </section>
+      <section class="admin">
+        <h4 class="main-drawer-heading">Admin</h4>
+        <h3><img class="lolli" src="images/muffin.svg" height="20" width="20">USERS</h3>
+        <h3><img class="lolli" src="images/muffin.svg" height="20" width="20">LOCATIONS</h3>
+        <h3><img class="lolli" src="images/muffin.svg" height="20" width="20">WORKFLOWS</h3>
+        <h3><img class="lolli" src="images/muffin.svg" height="20" width="20">JOB BOARDS</h3>
+        <h3><img class="lolli" src="images/muffin.svg" height="20" width="20">SOCIAL</h3>
+      </section>
+      <section class="categories">
+        <h4><img class="lolli" src="images/watermelon.svg" height="20" width="20">Administrative</h4>
+        <h4><img class="lolli" src="images/watermelon.svg" height="20" width="20">Design</h4>
+        <h4><img class="lolli" src="images/watermelon.svg" height="20" width="20">Executive</h4>
+        <h4><img class="lolli" src="images/watermelon.svg" height="20" width="20">Human Resources</h4>
+      </section>
+    </section>
+    <section class="graphs">
+      <div class="circle-grid graph-and-button">
+        <div class="circlies">
+          <svg width="180" height="150">
+            <circle class="circle1" cx="65" cy="65" r="60" stroke="green" stroke-width="4" fill="yellow" />
+            <text x="37%" y="37%" text-anchor="middle" stroke="#51c5cf" stroke-width="2px" dy=".3em">Look</text>
+          </svg>
+          <svg width="180" height="150">
+            <circle cx="65" cy="65" r="60" stroke="lightblue" stroke-width="4" fill="yellow" />
+            <text x="37%" y="37%" text-anchor="middle" stroke="#51c5cf" stroke-width="2px" dy=".3em">At</text>
+          </svg>
+          <svg  width="180" height="150">
+            <circle cx="65" cy="65" r="60" stroke="violet" stroke-width="4" fill="yellow" />
+            <text x="37%" y="37%" text-anchor="middle" stroke="#51c5cf" stroke-width="1px" dy=".3em">It</text>
+          </svg>
+        </div>
+        <div>
+          <button class="press-btn">PRESS for fun</button>
+        </div>
+      </div>
+      <div class="mobile-circlies">
+        <div class="inner-circle">
+          <div class="third-circle">
+        </div>
+        </div>
+      </div>
+      <div class="fruit-grid graph-and-button">
+        <img class="fruit-graph" src="images/bar-graph-fruit.svg" height="250" width="450">
+        <div>
+          <button class="squish-btn">SQUISH/SCREAM</button>
+        </div>
+      </div>
+    </section>
+    <section class="descriptions">
+      <table class="description-table">
+        <tr class="top-description">
+          <th colspan="2">JOB DESCRIPTION <button><img class="edit-icon" src="images/edit.svg" height="20" width="20"></img>EDIT</button></th>
+        </tr>
+        <tr>
+          <td>POSITION TITLE</td>
+          <td class="right">Customer Service Representative</td>
+        </tr>
+        <tr>
+          <td>LOCATION</td>
+          <td class="right">Jackson</td>
+        </tr>
+        <tr>
+          <td>EMPLOYMENT TYPE</td>
+          <td class="right">Doe</td>
+        </tr>
+        <tr>
+          <td>EXPERIENCE</td>
+          <td class="right">Doe</td>
+        </tr>
+        <tr>
+          <td>STATUS</td>
+          <td class="right">Doe</td>
+        </tr>
+        <tr>
+          <td>DESCRIPTION</td>
+          <td class="right">Doe Lorem Ipsum Candy Watermelon Eggo Gremlin
+          Cat Lollipop JollyRancer L'eggo Land Before Time, The NeverEnding Story
+          As if, Sock'em Boppers, Almodovar</td>
+        </tr>
+        <tr>
+          <td>HIRING LEAD</td>
+          <td class="right-veruca"><img class="veruca" src="images/veruca_salt.jpg" height="40" width="40"></img><span class="veruca-text">Veruca Salt</span></td>
+        </tr>
+        <tr> 
+          <td class="right-bottom">APPROVED SALARY</td>
+          <td class="right right-bottom">Doe</td>
+        </tr>
+      </table>
+    </section>
+    <section class="social">
+      <button class="scl-btn facebook"><img class="mouth" src="images/mouth.svg" height="20" width="20">See Gummy</button>
+      <button class="scl-btn twitter"><img class="mouth" src="images/mouth.svg" height="20" width="20">See Cruncy</button>
+      <button class="scl-btn linkedin"><img class="mouth" src="images/mouth.svg" height="20" width="20">See Chewy</button>
+      <section class="social-type">
+        <h2 class="social-h social-text">Link to this Job</h2>
+        <p class="social-text">lorem ipsum lorem ipsujm lorme ipsume
+        lorem ipmsum lorme uimaps apple</p>
+        <div class="input-and-button">
+          <input class="social-input"></input>
+          <button class="social-btn">LICK ME</button>
+        </div>
+          <h2 class="social-h social-text">Use the Button Widget</h2>
+          <p class="social-text">lorem ipsum banana pineapple lorem ipsum
+          lorem ipsum kiwi coconut</p>
+        <div class="input-and-button">
+          <input class="social-input"></input>
+          <button class="social-btn">BUTT ME</button>
+        </div>
+          <h2 class="social-h social-text">Upload Resumes by Email</h2>
+          <p class="social-text">lorem imsum lorem ipsum dragonfruit
+          mango orange lorem ipsum lorem ipsum</p>
+        <div class="input-and-button">
+          <input class="social-input"></input>
+          <button class="social-btn">MMM ME</button>
+        </div>
+      </section>
+    </section>
+  </div>
+</body>
+</html>
