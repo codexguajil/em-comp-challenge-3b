@@ -60,10 +60,6 @@
   display: inline-flex;
 }
 
-.bottom-heading:hover {
-  background-color: navy;
-}
-
 .drawer-hover {
   display: inline-flex;
   width: 100%;
@@ -74,15 +70,15 @@
 }
 
 .drawer-hover:hover {
-  background-color: green;
+  color: green;
 }
 
 .drawer-hover-2:hover {
-  background-color: pink;
+  color: pink;
 }
 
 .drawer-hover-3:hover {
-  background-color: navy;
+  color: navy;
 }
 
 .img-circle {
@@ -90,7 +86,7 @@
 }
 
 .job-boards {
-  background-color: pink;
+  color: pink;
 }
 
 .profile-pic {
@@ -141,7 +137,8 @@
 /*header styling*/
 
 .header {
-  background: linear-gradient(to bottom right, green 50%, white 18.5%, pink, #ff7c4d 85%);
+  /*background: linear-gradient(to bottom right, green 50%, white 18.5%, pink, #ff7c4d 85%);*/
+  background-color: white;
   display: grid;
   grid-area: header;
   grid-template-columns: 2fr 1fr 1fr;
@@ -307,11 +304,7 @@
 /*end of location preview*/
 
 .title {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.35, darkviolet), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, darkviolet), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: black;
   font-family: 'Beigly Demo';
   font-size: 2em;
   grid-area: title;
@@ -326,46 +319,44 @@
 .preview {
   color: lightpink;
   grid-area: preview;
+  margin-top: 3px;
 }
 
 .summary-header {
   color: dodgerblue;
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(.4, snow), color-stop(1, darkviolet));
-  background-image: gradient( linear, left top, right top, color-stop(.1, #fff), color-stop(1, darkviolet));
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  border-bottom: 2px solid blue;
+  border-bottom: solid 2px #000;
+  padding-bottom: 5px;
+  margin-bottom: 0;
   grid-area: summary;
 }
 
 .applicants-header {
-  color: #ff99cf;
+  color: black;
   grid-area: applicants;
 }
 
 .job-header {
-  color: lightgreen;
+  color: black;
   grid-area: job;
 }
 
 .interview-header {
-  color: darkorange;
+  color: black;
   grid-area: interview;
 }
 
 .activity-header {
-  color: #ffff00;
+  color: black;
   grid-area: activity;
 }
 
 .broadcast-header {
-  color: cyan;
+  color: black;
   grid-area: broadcast;
 }
 
 .notification-header {
-  color: #9999ff;
+  color: black;
   grid-area: notification;
 }
 
@@ -374,13 +365,45 @@
   font-size: 1em;
 }
 
+/*hover states*/
+
+.applicants-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.job-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.interview-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.activity-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.broadcast-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.notification-header:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
 /*end of header styling*/
 
 /*graphs styling*/
 
 .graphs {
   border-bottom: 3px dotted #ff8533;
-  border-image: linear-gradient(to right, #ffff99 50%, #3acfd5 60%);
+  border-image: linear-gradient(to right, lightgreen 5%, #ffff99 20%, #3acfd5 80%);
   border-image-slice: 1;
   display: inline-flex;
   grid-area: graphs;
@@ -394,6 +417,42 @@
   margin-top: 20%;
   margin-right: 0;
   margin-left: 5%;
+}
+
+.donut-container {
+  width: 150px;
+  height: 150px;
+  float: left;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  border-radius: 75px;
+  margin-right: 20px;
+}
+
+.donut-inner {
+  width: 134px;
+  height: 134px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  background: #ffb3cc ;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+}
+
+.donut-label {
+  padding-top: 45px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: grey;
+}
+
+.donut-number {
+  color: #525A65;
+  font-size: 34px;
+  margin-bottom: 3px;
 }
 
 .fruit-graph {
@@ -436,6 +495,20 @@
   margin: auto;
 }
 
+.edit-button {
+  margin-left: 10px;
+  padding: 3px;
+}
+
+.edit-icon {
+  margin: 3px 3px;
+}
+
+.job {
+  color: white;
+  margin-right: 15px;
+}
+
 th, 
 td {
     border-bottom: 1px dashed purple;
@@ -476,9 +549,6 @@ td {
 /*end of description styling*/
 
 /*social section styling*/
-.edit-icon {
-  margin: 3px 3px;
-}
 
 .mouth {
   position: absolute;
@@ -563,12 +633,22 @@ td {
   background-color: yellow;
 }
 
+@media only screen and (max-width: 1400px) and (min-width: 1201) {
+  .donuts {
+    margin: auto;
+  }
+
+  .press-btn {
+    margin-top: 20px;
+  }
+}
+
 @media only screen and (min-width: 1201px) {
   .drawer {
     padding-right: 25px;
   }
 
-  .drawer-hover {
+  /*.drawer-hover {
     width: 80%;
   }
 
@@ -578,7 +658,7 @@ td {
 
   .drawer-hover-3 {
     width: 80%;
-  }
+  }*/
 
   .profile-pic {
     border: none;
@@ -621,7 +701,7 @@ td {
   }
 
   .press-btn {
-    margin-top: 90px;
+    margin-top: 88px;
   }
 
   .search {
@@ -652,25 +732,37 @@ td {
   .sub-headers {
     margin-top: 20px;
     position: relative;
-    width: 100%;
+    width: 80%;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 
   .grid {
-    height: 2050px;
+    height: 2350px;
+    width: 100%;
   }
 
   .circle-grid {
     grid-area: circles;
+    width: 100%;
   }
 
   .circlies {
     margin-top: 100px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .donuts {
+    margin: auto;
   }
 
   .fruit-grid {
     grid-area: fruit;
+  }
+
+  .graph-and-button {
+    margin: auto;
   }
 
   .press-btn {
@@ -701,7 +793,7 @@ td {
 
   .fruit-graph {
     margin-top: 40px;
-    width: 100%;
+    width: 80%;
   }
 
   .circle1 {
@@ -778,7 +870,7 @@ td {
   }
 
   .sub-headers {
-    align-items: flex-start;
+    align-items: flex-end;
     display: flex;
     flex-wrap: wrap;
     grid-area: subheader;
